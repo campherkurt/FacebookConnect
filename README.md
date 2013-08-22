@@ -16,15 +16,17 @@ It also keeps a list of all the API calls made before the Facebook object was re
 
 ##### Basics
 Do a simple API call to get the user's basic detail, replace the content in "<â¦>" with your relevant details.
+ 
+ ```javascript
+var fb_settings = {
+	  appId: "<your_FB_app_id>",
+    channelUrl: <URL_to_FB_channel>,
+    scope: "<Facebook,scope,items,comma,separated>"
+  };
 
-	var fb_settings = {
- 	  appId: "<your_FB_app_id>",
-      channelUrl: <URL_to_FB_channel>,
-      scope: "<Facebook,scope,items,comma,separated>"
-    };
-  
-	var fc = new FacebookConnect(fb_settings,<callback_function>)
-	fc.api('/me',<callback_function>);
+var fc = new FacebookConnect(fb_settings,<callback_function>)
+fc.api('/me',<callback_function>);
+```
 	
 	
 ### Methods
@@ -113,16 +115,17 @@ Do a simple API call to get the user's basic detail, replace the content in "<â
 
 #### Chaining methods
 FacebookConnect supports chaining methods to make writing your code so much easier.
-	
-	var fb_settings = {
- 	  appId: "<your_FB_app_id>",
-      channelUrl: <URL_to_FB_channel>,
-      scope: "<Facebook,scope,items,comma,separated>"
-    };
-  
-	var fc = new FacebookConnect(fb_settings,<callback_function>)
-	fc.onError(<callback_function>).onAuthError(<callback_function>).api('/me',<callback_function>);
-	
+
+```javascript
+var fb_settings = {
+	  appId: "<your_FB_app_id>",
+    channelUrl: <URL_to_FB_channel>,
+    scope: "<Facebook,scope,items,comma,separated>"
+  };
+
+var fc = new FacebookConnect(fb_settings,<callback_function>)
+fc.onError(<callback_function>).onAuthError(<callback_function>).api('/me',<callback_function>);
+```
 	
 ### License
 MIT-License:
