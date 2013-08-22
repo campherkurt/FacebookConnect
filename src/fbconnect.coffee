@@ -1,3 +1,11 @@
+###
+  FacebookConnect: Facebook SDK helper class
+  http://stephan.steynfaardt.com
+
+  Copyright (c) 2013 Stephan Steynfaardt
+  Released under the MIT license
+  http://opensource.org/licenses/MIT
+###
 "use strict"
 ((window, undefined_) ->
   #private properties
